@@ -4,12 +4,26 @@ import java.util.ArrayList;
 import java.util.Random;
 
 import Problems.AnyTwoNumbersSumToK;
+import Problems.CountUnivalSubtrees;
+import Tree.ManualBinaryTree;
 
 public class Driver 
 {
 	public static void main(String[] args)
 	{
-		any2(Integer.parseInt(args[0]));
+		univalTrees();
+		//any2(Integer.parseInt(args[0]));
+	}
+	
+	public static void univalTrees()
+	{
+		ManualBinaryTree mbt = new ManualBinaryTree();
+		mbt.setUpExampleTree();
+		
+		CountUnivalSubtrees cus = new CountUnivalSubtrees(mbt);
+		
+		int count = cus.count();
+		System.out.println("Unival Trees: " + count);
 	}
 	
 	public static void any2(int k)
