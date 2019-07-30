@@ -1,18 +1,52 @@
 package Driver;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.Random;
 
 import Problems.AnyTwoNumbersSumToK;
 import Problems.CountUnivalSubtrees;
+import Problems.FindIntersectingNodeLL;
 import Tree.ManualBinaryTree;
 
 public class Driver 
 {
 	public static void main(String[] args)
 	{
-		univalTrees();
+		intersectingLinks();
+		
+		//univalTrees();
 		//any2(Integer.parseInt(args[0]));
+	}
+	
+	public static void intersectingLinks()
+	{
+		LinkedList<Integer> ll_one = new LinkedList<Integer>();
+		LinkedList<Integer> ll_two = new LinkedList<Integer>();
+		
+		ll_one.add(3);
+		ll_one.add(7);
+		ll_one.add(8);
+		ll_one.add(10);
+		
+		ll_two.add(99);
+		ll_two.add(1);
+		ll_two.add(8);
+		ll_two.add(10);
+		
+		for(Integer i : ll_one)
+		{
+			System.out.print(i+ " ");
+		}
+		System.out.println();
+		for(Integer i: ll_two)
+		{
+			System.out.print(i+ " ");
+		}
+		System.out.println();
+		
+		FindIntersectingNodeLL fi = new FindIntersectingNodeLL(ll_one, ll_two);
+		System.out.println("Intersection point: " + fi.findIntersection());
 	}
 	
 	public static void univalTrees()
