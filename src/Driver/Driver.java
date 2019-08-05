@@ -8,17 +8,55 @@ import Problems.AnyTwoNumbersSumToK;
 import Problems.ClassroomLectures;
 import Problems.CountUnivalSubtrees;
 import Problems.FindIntersectingNodeLL;
+import Problems.MinNumStepsBoard;
 import Tree.ManualBinaryTree;
 
 public class Driver 
 {
 	public static void main(String[] args)
 	{
-		classroomLectures();
+		minNumSteps();
 		
+		//classroomLectures();
 		//intersectingLinks();
 		//univalTrees();
 		//any2(Integer.parseInt(args[0]));
+	}
+	
+	public static void minNumSteps()
+	{
+		//where top left of matrix is (0,0)
+		boolean[][] board = new boolean[4][4];
+		board[0][0] = false;
+		board[0][1] = false;
+		board[0][2] = false;
+		board[0][3] = false;
+		
+		board[1][0] = true;
+		board[1][1] = true;
+		board[1][2] = false;
+		board[1][3] = true;
+		
+		board[2][0] = false;
+		board[2][1] = false;
+		board[2][2] = false;
+		board[2][3] = false;
+		
+		board[3][0] = false;
+		board[3][1] = false;
+		board[3][2] = false;
+		board[3][3] = false;
+		
+		MinNumStepsBoard msb = new MinNumStepsBoard(board, 4, 4);
+		int[] start_coord = new int[2];
+		start_coord[0] = 3;
+		start_coord[1] = 0;
+		int[] end_coord = new int[2];
+		end_coord[0] = 0;
+		end_coord[1] = 0;
+		int num_steps = msb.minNumSteps(start_coord, end_coord);
+		
+		System.out.println("Minimum number of steps: " + num_steps);
 	}
 	
 	public static void classroomLectures()
