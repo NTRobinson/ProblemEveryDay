@@ -5,6 +5,7 @@ import java.util.LinkedList;
 import java.util.Random;
 
 import Problems.AnyTwoNumbersSumToK;
+import Problems.BalancedBrackets;
 import Problems.ClassroomLectures;
 import Problems.CountUnivalSubtrees;
 import Problems.FindIntersectingNodeLL;
@@ -15,12 +16,25 @@ public class Driver
 {
 	public static void main(String[] args)
 	{
-		minNumSteps();
+		balancedBrackets();
 		
+		//minNumSteps();
 		//classroomLectures();
 		//intersectingLinks();
 		//univalTrees();
 		//any2(Integer.parseInt(args[0]));
+	}
+	
+	public static void balancedBrackets()
+	{
+		String s_1 = "([])[]({})";
+		String s_2 = "([)]";
+		String s_3 = "((()";
+		
+		BalancedBrackets bb = new BalancedBrackets();
+		System.out.println("Test string " + s_1 + " is balanced: " + bb.test(s_1));
+		System.out.println("Test string " + s_2 + " is balanced: " + bb.test(s_2));
+		System.out.println("Test string " + s_3 + " is balanced: " + bb.test(s_3));
 	}
 	
 	public static void minNumSteps()

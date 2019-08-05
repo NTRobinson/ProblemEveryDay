@@ -83,6 +83,7 @@ public class MinNumStepsBoard
 			
 			q.remove();
 			
+			// this is where the magic happens
 			for(int i = 0; i < 4; i++)
 			{
 				int[] new_coord = new int[2];
