@@ -8,6 +8,7 @@ import Problems.AnyTwoNumbersSumToK;
 import Problems.BalancedBrackets;
 import Problems.ClassroomLectures;
 import Problems.CountUnivalSubtrees;
+import Problems.EditDistance;
 import Problems.FindIntersectingNodeLL;
 import Problems.MinNumStepsBoard;
 import Problems.RunLengthEncoding;
@@ -17,14 +18,24 @@ public class Driver
 {
 	public static void main(String[] args)
 	{
-		runLengthEncoding();
+		editDistance();
 		
+		//runLengthEncoding();
 		//balancedBrackets();
 		//minNumSteps();
 		//classroomLectures();
 		//intersectingLinks();
 		//univalTrees();
 		//any2(Integer.parseInt(args[0]));
+	}
+	
+	public static void editDistance()
+	{
+		String s_1 = "kitten";
+		String s_2 = "sitting";
+		
+		EditDistance ed = new EditDistance();
+		System.out.println("Edit distance between \"" + s_1 + "\" and \'" + s_2 + "\": " + ed.distance(s_1, s_2));
 	}
 	
 	public static void runLengthEncoding()
