@@ -10,19 +10,31 @@ import Problems.ClassroomLectures;
 import Problems.CountUnivalSubtrees;
 import Problems.FindIntersectingNodeLL;
 import Problems.MinNumStepsBoard;
+import Problems.RunLengthEncoding;
 import Tree.ManualBinaryTree;
 
 public class Driver 
 {
 	public static void main(String[] args)
 	{
-		balancedBrackets();
+		runLengthEncoding();
 		
+		//balancedBrackets();
 		//minNumSteps();
 		//classroomLectures();
 		//intersectingLinks();
 		//univalTrees();
 		//any2(Integer.parseInt(args[0]));
+	}
+	
+	public static void runLengthEncoding()
+	{
+		String raw_string = "AAAABBBCCDAA";
+		String encoded_string = "4A3B2C1D2A";
+		
+		RunLengthEncoding rle = new RunLengthEncoding();
+		System.out.println("Original: " + raw_string + " Encoded: " + rle.encode(raw_string));
+		System.out.println("Original: " + encoded_string + "Decoded: " + rle.decode(encoded_string));
 	}
 	
 	public static void balancedBrackets()
