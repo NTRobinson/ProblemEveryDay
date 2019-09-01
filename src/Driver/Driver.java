@@ -12,14 +12,16 @@ import Problems.EditDistance;
 import Problems.FindIntersectingNodeLL;
 import Problems.MinNumStepsBoard;
 import Problems.RunLengthEncoding;
+import Problems.RunningMedian;
 import Tree.ManualBinaryTree;
 
 public class Driver 
 {
 	public static void main(String[] args)
 	{
-		editDistance();
+		runningMedian();
 		
+		//editDistance();
 		//runLengthEncoding();
 		//balancedBrackets();
 		//minNumSteps();
@@ -27,6 +29,27 @@ public class Driver
 		//intersectingLinks();
 		//univalTrees();
 		//any2(Integer.parseInt(args[0]));
+	}
+	
+	public static void runningMedian()
+	{
+		RunningMedian rm = new RunningMedian();
+		float median = 0;
+		
+		median = rm.addNumber(2);
+		System.out.println(median);
+		median = rm.addNumber(1);
+		System.out.println(median);
+		median = rm.addNumber(5);
+		System.out.println(median);
+		median = rm.addNumber(7);
+		System.out.println(median);
+		median = rm.addNumber(2);
+		System.out.println(median);
+		median = rm.addNumber(0);
+		System.out.println(median);
+		median = rm.addNumber(5);
+		System.out.println(median);
 	}
 	
 	public static void editDistance()
